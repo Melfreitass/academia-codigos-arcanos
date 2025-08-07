@@ -71,11 +71,31 @@ let mana2 = ("Ai Processing") //Usa a inteligencia artificial para prever movime
 let energiaMana1 = 100  //máx de 100 - mana 1
 let energiaMana2 = 100 //max de 100 - mana 2
 
-let forca = 40;     //máximo é 50;
-let defesa = 45;    //máximo é 50;
-let agilidade = 30; //máximo é 50;
+let forca = 45;     //máximo é 100;
+let defesa = 45;    //máximo é 100;
+let agilidade = 40; //máximo é 100;
 let combatesVencidos = 1;
 
 console.log(`Agora, com novos poderes de ${mana1} = ${energiaMana1} e ${mana2} = ${energiaMana2}, ela segue com ${forca} de força, ${defesa} de defesa e ${agilidade} de agiliade. E ai vem uma grande jornada pela frente...🏹`);
 
+//Capítulo 1: condições simples na narrativa
+console.log(`\n📜 Capítulo 1:`);
+console.log(`Antes de atravessar o ${localAtual}:`);
 
+if (ouro > 5) {
+    console.log("Uma fada aparece e oferece a ela uma 🍊fruta deliciosa, em troca de algumas de suas moedas, dizendo que a fruta aumentará sua vida, ajudando na batalha");
+    console.log(`Porém ${nome} recusa a oferta, desconfiando ser uma fruta Trojan, que a infectaria 🩸diminuiria sua vida`)
+}
+ 
+if (forca < 50) {
+    console.log("A forca física ainda é limitada, ela preisa treinar mais se quiser continuar");
+}
+
+if (agilidade < 50) {
+    console.log(`A ${classe} percebe que seus poderes estão limitados, então decide treinar para aumentá-los`);
+    forca += 40
+    agilidade += 30
+    console.log(`Então seus poderes aumentam para força = ${forca} e agilidade = ${agilidade}`);
+}
+
+console.log("✔ Agora ela está pronta para seguir sua jornada...")
