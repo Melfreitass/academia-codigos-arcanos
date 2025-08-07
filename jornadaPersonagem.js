@@ -58,7 +58,7 @@ console.log(`Sim, tudo valeu a pena, e agora a batalha final se aproxima!!`);
 // Nível 2 - continuação da jornada do nível 1
 
 // Estado atual da história
-let localAtual = "Labirinto de códgo obscuro, no castelo Firewallia"
+let localAtual = "Labirinto de códgo obscuro"
 let missaoAtual = "atravessa-lo e derrotar o exército de Malwere"
 
 // Recapitulando
@@ -67,9 +67,9 @@ console.log(`Como visto anteriormente, a ${classe} ${nome} está em frente a um 
 
 //Novos atribitos para a batalha
 let mana1 = ("camuflagem de dados")  //Faz com que a personagem se camufle
-let mana2 = ("Ai Processing") //Usa a inteligencia artificial para prever movimentos inimigos e hackear sistemas
-let energiaMana1 = 100  //máx de 100 - mana 1
-let energiaMana2 = 100 //max de 100 - mana 2
+let mana2 = ("Ai Processing") //Usa a inteligencia artificial para prever movimentos inimigos, calcular rotas, etc
+let energiaMana1 = 80  //máx de 100 - mana 1
+let energiaMana2 = 80 //max de 100 - mana 2
 
 let forca = 45;     //máximo é 100;
 let defesa = 45;    //máximo é 100;
@@ -79,12 +79,12 @@ let combatesVencidos = 1;
 console.log(`Agora, com novos poderes de ${mana1} = ${energiaMana1} e ${mana2} = ${energiaMana2}, ela segue com ${forca} de força, ${defesa} de defesa e ${agilidade} de agiliade. E ai vem uma grande jornada pela frente...🏹`);
 
 //Capítulo 1: condições simples na narrativa
-console.log(`\n📜 Capítulo 1:`);
+console.log(`\n📜 Capítulo 1: a fada desfarçada 🧚‍♀️`);
 console.log(`Antes de atravessar o ${localAtual}:`);
 
 if (ouro > 5) {
     console.log("Uma fada aparece e oferece a ela uma 🍊fruta deliciosa, em troca de algumas de suas moedas, dizendo que a fruta aumentará sua vida, ajudando na batalha");
-    console.log(`Porém ${nome} recusa a oferta, desconfiando ser uma fruta Trojan, que a infectaria 🩸diminuiria sua vida`)
+    console.log(`Porém ${nome} recusa a oferta, desconfiando ser uma fruta Trojan, que a infectaria 🩸diminuiria sua vida`);
 }
  
 if (forca < 50) {
@@ -98,4 +98,28 @@ if (agilidade < 50) {
     console.log(`Então seus poderes aumentam para força = ${forca} e agilidade = ${agilidade}`);
 }
 
-console.log("✔ Agora ela está pronta para seguir sua jornada...")
+console.log("✔ Agora ela está pronta para seguir sua jornada...");
+
+//Capitulo 2: Escolha estratégica
+console.log(`\n📜 Capítulo 2: Atravesando o Labirinto 🧠`);
+console.log(`${nome} precisa atravessar o ${localAtual}, composto por milhares de armadilhas lógica e confusas, está em sua frente, então precisa analisar seus atributos para decidir como fará isso`);
+
+if (energiaMana2 > 40) {
+    console.log(`A ${classe} tem poder de ${mana2} suficiente para calcular rotas`);
+    console.log(`Ela utiliza seu poder reconhecer os padrões e calcular as rotas que a ajudarão escapar do ${localAtual} com segurança`);
+    energiaMana2 -= 40
+} else {
+    console.log(`A ${classe} não tem poder de ${mana2} suficiente para calcular rotas`);
+    vida -= 40
+    console.log(`Ela utiliza sua prórpia energia para reconhecer os padrões e calcular as rotas que a ajudarão escapar do ${localAtual}, gastando 40 de sua vida, ficando agora com ${vida}`);
+}
+
+console.log("Agora que ela conseguiu atravesar o labirinto, precisa destruí-lo, para que ninguém corra o perigo de se perder nele");
+
+if (energiaMana1 > 40) {
+    console.log(`A heroína tem energia em seus poderes de ${mana1}, e decide usá-los`);
+    console.log(`Ela se camufla e vai até o ponto de controle do ${localAtual} sem ser vista, onde deleta todo o código`);
+    console.log(`O local começa a sumir, parte por parte.... Agora ninguém corre os risco de se perder 🎉!!`);
+} else {
+    
+}
