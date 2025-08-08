@@ -166,3 +166,18 @@ if (DANO_BASE >= 50 && forca >= 80) {
     poderInimigo -= 40;
 }
 
+//Epílogo: resultado final
+
+if (poderInimigo <= 0) {
+    console.log(`\nBatalha concluída!!!✨✨ O ${nomeInimigo} foi derrotado!`);
+    console.log(`${nome} recupera o 💰ouro preciso: dados pessoais, e fica reconhecida por todo reino!!`);
+    xp += 100;
+    nivel += 10;
+    combatesVencidos++;
+    ouro +=50;
+} else {
+    console.log(`\n${nome} consegue capturar o 💰ouro precioso: dados pessoais, porém não derrota o inimigo!😕`);
+    console.log(`Foi uma batalha difícil, e ela sobrevive, mas terá que retornar para derrotar o ${nomeInimigo}`);
+}
+
+console.log(`\n📖FIM DO CAPÍTULO - Aguarde o próximo nível`);
