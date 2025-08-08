@@ -174,10 +174,46 @@ if (poderInimigo <= 0) {
     xp += 100;
     nivel += 10;
     combatesVencidos++;
-    ouro +=50;
+    ouro +=90;
 } else {
     console.log(`\n${nome} consegue capturar o 💰ouro precioso: dados pessoais, porém não derrota o inimigo!😕`);
     console.log(`Foi uma batalha difícil, e ela sobrevive, mas terá que retornar para derrotar o ${nomeInimigo}`);
 }
 
 console.log(`\n📖FIM DO CAPÍTULO - Aguarde o próximo nível`);
+
+
+// Nível 3 - continuação da jornada
+
+console.log(`\n\n🎯A batalha de ${nome} - nível 3\n`);
+
+localAtual = "Castelo dos Arrays"
+console.log(`Após a batalha épica contra o ${nomeInimigo}, a ${classe} ${nome} recebe uma nova missão: explorar o 🏰${localAtual}🏰`);
+console.log(`Agora ela segue com - nivel: ${nivel}, vida: ${vida}, xp: ${xp}, ouro: ${ouro}`);
+
+//Novos elementos para a jornada
+let inventario = ["Firesword wall", "Malware shield"]; //Ao decorrer da história novos serão adicionados
+let inimigosEncontrados = ["Exército Malware", "Robot Malware", "Guardião"]; //Inimigos que já foram encontrados, com o tempo mais serão adicionados
+let espacosCastelo = ["Escada descriptografada", "Sala Adware", "Biblioteca Viral"];
+let tesouros = []; //Adicionados no decorrer da jornada
+
+console.log(`Antes de entrar ela confere seu invertário, para analisar o que tem guardado:💼 ${inventario} - ${inventario.length} itens`);
+
+
+//Capítulo 1: Descoberta de novos itens
+console.log(`\n📜 Capítulo 1: Explorando e encontando itens`);
+
+//Declaração e Inicialização
+console.log(`Conforme ela entrava no castelo, encontrou poções, que seriam úteis para sua jornada.`);
+let poçõesEncontradas = ["Poção do resfriamento", "poção IA", "poção de camuflagem"];
+
+//Acesso de elementos
+console.log(`Primeira poção encontrada: 🧪 ${poçõesEncontradas[0]}`);
+console.log(`E após essa encontrou mais algumas, ficando com ${poçõesEncontradas.length} 🧪`);
+
+//Utilizando métodos array
+inventario.push(poçõesEncontradas[0]);
+console.log("Inventário atual:");
+console.table(inventario)
+
+conct
