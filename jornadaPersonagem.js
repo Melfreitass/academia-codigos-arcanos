@@ -205,15 +205,18 @@ console.log(`\n📜 Capítulo 1: Explorando e encontando itens`);
 
 //Declaração e Inicialização
 console.log(`Conforme ela entrava no castelo, encontrou poções, que seriam úteis para sua jornada.`);
-let poçõesEncontradas = ["Poção do resfriamento", "poção IA", "poção de camuflagem"];
+let poçoesEncontradas = ["Poção do resfriamento", "poção IA", "poção de camuflagem"];
 
-//Acesso de elementos
-console.log(`Primeira poção encontrada: 🧪 ${poçõesEncontradas[0]}`);
-console.log(`E após essa encontrou mais algumas, ficando com ${poçõesEncontradas.length} 🧪`);
+//Acesso de elementos e utilizando métodos array para aicionar itens
+console.log(`Primeira poção encontrada: 🧪 ${poçoesEncontradas[0]}`);
+inventario.push(poçoesEncontradas[0]);
+console.log(`E após essa encontrou mais algumas, ficando com ${poçoesEncontradas.length} 🧪`);
+inventario.push(poçoesEncontradas[1]);
+inventario.push(poçoesEncontradas[2]);
 
-//Utilizando métodos array
-inventario.push(poçõesEncontradas[0]);
-console.log("Inventário atual:");
-console.table(inventario)
+console.log("Os novos itens foram adicionados no iventário. Iventário atual:");
+console.table(inventario);
 
-conct
+//Utilizando métodos array para modificar itens
+inventario[0] = "Firesword wall épica";  // Upgrade da espada
+console.log("Ela também gasou algumas moedas para fazer um upgrade em sua espada, chamada agora de " + inventario[0]);
