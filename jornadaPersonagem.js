@@ -193,9 +193,9 @@ console.log(`Agora ela segue com - nivel: ${nivel}, vida: ${vida}, xp: ${xp}, ou
 
 //Novos elementos para a jornada
 let inventario = ["Firesword wall", "Malware shield"]; //Ao decorrer da história novos serão adicionados
-let inimigosEncontrados = ["Exército Malware", "Robot Malware", "Guardião"]; //Inimigos que já foram encontrados
+let inimigosEncontrados = ["Lord Malareon", "Espiã Cibernética", "Gigante Colosso"]; 
 let espacosCastelo = ["Escada descriptografada", "Fire room", "Biblioteca Viral"];
-let aliados = [`Cavaleiro Protetor`, "Mensageira da nuvem", "Feiticeiro de cóigo"];
+let aliados = [`Cavaleiro Protetor`, "Mensageira da nuvem", "Feiticeiro de código"];
 
 console.log(`Antes de entrar ela confere seu invertário, para analisar o que tem guardado:💼 ${inventario} - ${inventario.length} itens`);
 
@@ -219,7 +219,7 @@ console.table(inventario);
 
 //Utilizando métodos array para modificar itens
 inventario[0] = "Firesword wall épica";  // Upgrade da espada
-console.log("Ela também gasou algumas moedas para fazer um upgrade em sua espada, chamada agora de " + inventario[0]);
+console.log("Ela também gastou algumas moedas para fazer um upgrade em sua espada, chamada agora de " + inventario[0]);
 
 //Capítulo 2: Iniciano a exploração
 console.log(`\n📜 Capítulo 2: Explorando os espaços do Castelo de Firewallia 🔍🏰`);
@@ -266,7 +266,7 @@ console.log(`${aliado} traz mais vida e experiência`);
 vida += 30;
 xp += 10;
 } else { // Demais aliados - Especialistas
-console.log(`${aliado} derroda o que está descriptografado e traz mais ouro`);
+console.log(`${aliado} derrota o que está descriptografado e traz mais ouro`);
 ouro += 40;
 }
 }
@@ -275,11 +275,50 @@ console.log(`🎖️ Equipe completa! Ouro: ${ouro}, XP: ${xp} e Vida: ${vida}`)
 
 //Capítulo 4: A batalha final
 console.log(`\n📜 CAPÍTULO 4: Batalha Final`);
-let danoRecebio[];
+let danoRecebido = [];
 
 console.log(`${nome} enfrenta seus inimigos: ${inimigosEncontrados}`);
 
 // Batalha usando for tradicional para controle preciso
 for (let i = 0; i < inimigosEncontrados.length; i++) {
 let inimigo = inimigosEncontrados[i];
-let dano = Math.floor(Math.random() * 30) + 10; }
+let dano = Math.floor(Math.random() * 30) + 15; 
+
+console.log(`Rodada ${i + 1} enfrentando ${inimigo}`);
+console.log(`💥 ${nome} causa ${dano} de dano!`);
+danoRecebido.push(dano)
+
+if (i === 0) {
+    console.log(`Ela tem a sua primeira vitória e coleta lindas pedras preciosas`);
+    inventario.push("Pedras preciosas")
+} else if (i === 1) {
+    console.log(`Segunda batalha! Tudo parecendo que não ia dar certo, mas ela sobrevive!`);
+    vida - 10
+} else {
+console.log(`🔥 Batalha final! O ${inimigo} recua e a vitória é alcançada!`);
+xp += 100;
+}}
+
+// Calculando batalha usando for 
+let danoTotal = 0;
+for (let i = 0; i < danoRecebido.length; i++) {
+danoTotal += danoRecebido[i];
+console.log(`Rodada ${i + 1} - Dano: ${danoRecebido[i]}`)
+}
+
+console.log(`⚡ Dano total causado ${danoTotal}`);
+
+//EPÍLOGO
+console.log(`\n👑EPÍLOGO: ${nome} Conquistando o castelo`);
+console.log(`Finalmente ela consegue acabar com a guerra`);
+console.log(`Foram tempos cansativos, mas no final ela ficou com grandes reconpensas:`);
+console.log(`XP: ${xp} | Ouro: ${ouro} | Nível: ${nivel} | Vida: ${vida} | Itens Iventário: ${inventario}`);
+console.log("O Castelo de Firewallia agora estava protegido, com os códigos obscuros desaparecidos ao vento");
+console.log("Cada batalha havia deixado marcas, mas também fortalecido a heroína");
+console.log(`Porém ${nome} sabia que no ciberespaço novas ameaças surgiriam`);
+console.log("Mas agora com o nível e experiência avançados, ela estava pronta para qualquer batalha");
+console.log(`\nE ela diz: Enquanto houver um ponto fraco no sistema, haverá ${nome} para defendê-lo!!!!✨✨`);
+
+
+
+
