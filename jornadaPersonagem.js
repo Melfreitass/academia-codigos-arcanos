@@ -193,9 +193,9 @@ console.log(`Agora ela segue com - nivel: ${nivel}, vida: ${vida}, xp: ${xp}, ou
 
 //Novos elementos para a jornada
 let inventario = ["Firesword wall", "Malware shield"]; //Ao decorrer da história novos serão adicionados
-let inimigosEncontrados = ["Exército Malware", "Robot Malware", "Guardião"]; //Inimigos que já foram encontrados, com o tempo mais serão adicionados
-let espacosCastelo = ["Escada descriptografada", "Sala Adware", "Biblioteca Viral"];
-let tesouros = []; //Adicionados no decorrer da jornada
+let inimigosEncontrados = ["Exército Malware", "Robot Malware", "Guardião"]; //Inimigos que já foram encontrados
+let espacosCastelo = ["Escada descriptografada", "Fire room", "Biblioteca Viral"];
+let aliados = [`Cavaleiro Protetor`, "Mensageira da nuvem", "Feiticeiro de cóigo"];
 
 console.log(`Antes de entrar ela confere seu invertário, para analisar o que tem guardado:💼 ${inventario} - ${inventario.length} itens`);
 
@@ -220,3 +220,66 @@ console.table(inventario);
 //Utilizando métodos array para modificar itens
 inventario[0] = "Firesword wall épica";  // Upgrade da espada
 console.log("Ela também gasou algumas moedas para fazer um upgrade em sua espada, chamada agora de " + inventario[0]);
+
+//Capítulo 2: Iniciano a exploração
+console.log(`\n📜 Capítulo 2: Explorando os espaços do Castelo de Firewallia 🔍🏰`);
+console.log(`Então a ${classe} começa a explorar cada sala do castelo, uma por uma...`);
+
+//Percorrendo cada sala usando for
+for (let i = 0; i < espacosCastelo.length; i++) {
+console.log("🚪 Sala " + (i + 1) + ": " + espacosCastelo[i]);
+
+//Lógica diferente par cada sala
+if (i === 0) {
+    console.log(`${nome} começa a subir os degraus da ${espacosCastelo[0]}, porém percebe que é muito perigosa e precisa proteger aquele local`);
+    console.log(`Assim ela usa sua ${inventario[3]} para ajudá-la a criar código mais complexos e tornar aquele local criptografado e suguro`);
+    xp += 30
+} else if (i === 1 ) {
+    console.log(`Agora ela se encontra na ${espacosCastelo[1]}, uma sala superaquecida faz seu processamento esquentar ao extremo`);
+    console.log(`Então ela utiliza sua ${inventario[2]} para refrigerá-la e coonseguir prosseguir`);
+    vida +=10
+} else if (i === 2) {
+    console.log(`Enfim então ela chega no último espaço: ${espacosCastelo[2]}, que está contaminado por vírus`);
+    console.log(`Ela usa sua espada para derrotá-los, e conquista o ouro que está lá`);
+    ouro += 50
+}}
+
+console.log("📊 Exploração completa!");
+
+//CAPÍTULO 3: A UNIÃO DOS ALIADOS
+console.log(`\n📜 CAPÍTULO 3: Reunindo os Aliados Arcanos`);
+
+// Recrutando aliados com for tradicional
+console.log("🏹 " + nome + " convoca seus aliados para a batalha final:");
+
+for (let i = 0; i < aliados.length; i++) {
+let aliado = aliados[i];
+console.log("⚡ Aliado " + (i + 1) + ": " + aliado + " se junta à missão!");
+
+// Cada posição no array determina habilidade especial
+if (i === 0) { 
+console.log(`${aliado} protege todos e aumenta a defesa e força`);
+defesa += 50;
+forca += 30;
+} else if (i === 1) { 
+console.log(`${aliado} traz mais vida e experiência`);
+vida += 30;
+xp += 10;
+} else { // Demais aliados - Especialistas
+console.log(`${aliado} derroda o que está descriptografado e traz mais ouro`);
+ouro += 40;
+}
+}
+
+console.log(`🎖️ Equipe completa! Ouro: ${ouro}, XP: ${xp} e Vida: ${vida}`)
+
+//Capítulo 4: A batalha final
+console.log(`\n📜 CAPÍTULO 4: Batalha Final`);
+let danoRecebio[];
+
+console.log(`${nome} enfrenta seus inimigos: ${inimigosEncontrados}`);
+
+// Batalha usando for tradicional para controle preciso
+for (let i = 0; i < inimigosEncontrados.length; i++) {
+let inimigo = inimigosEncontrados[i];
+let dano = Math.floor(Math.random() * 30) + 10; }
